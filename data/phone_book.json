@@ -1,3 +1,29 @@
 [
-  
+    {
+        "name": "Moondrop",
+        "phones": [
+            "Spaceship"
+        ]
+    },
+    {
+        "name": "QKZ",
+        "phones": [
+            "VK4"
+        ]
+    },
+    {
+        "name": "Sennheiser",
+        "phones": [
+            {
+                "name": ["CX 3.00"],
+                "file": ["CX 3.00", "CX 3.00 EQ"]
+            }
+        ]
+    },
+    {
+        "name": "Sony",
+        "phones": [
+            "IER-Z1R"
+        ]
+    }
 ]
