@@ -1,5 +1,5 @@
 // Configuration options
-const init_phones = ["HTH67"],                      // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+const init_phones = [""],                           // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
       DIR = "data/",                                // Directory where graph files are stored
       data_format = "AudioTools",                   // Accepts "AudioTools," "REW," or "other"
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
@@ -12,8 +12,8 @@ const init_phones = ["HTH67"],                      // Optional. Which graphs to
       alt_header = false,                           // Display a configurable header at the top of the alt layout
       alt_tutorial = false,                         // Display a configurable frequency response guide below the graph
       share_url = true,                             // If true, enables shareable URLs
-      watermark_text = "CrinGraph",                 // Optional. Watermark appears behind graphs
-      watermark_image_url = "cringraph-logo.svg",   // Optional. If image file is in same directory as config, can be just the filename
+      watermark_text = "",                          // Optional. Watermark appears behind graphs
+      watermark_image_url = "",                     // Optional. If image file is in same directory as config, can be just the filename
       page_title = "CrinGraph",                     // Optional. Appended to the page title if share URLs are enabled
       page_description = "View and compare frequency response graphs for earphones",
       accessories = false,                          // If true, displays specified HTML at the bottom of the page. Configure further below
@@ -31,9 +31,8 @@ const init_phones = ["HTH67"],                      // Optional. Which graphs to
 
 // Specify which targets to display
 const targets = [
-    { type:"Neutral",    files:["Diffuse Field","Etymotic","Free Field","Innerfidelity ID"] },
-    { type:"Reviewer",   files:["Antdroid","Bad Guy","Banbeucmas","Crinacle","Precogvision","Super Review"] },
-    { type:"Preference", files:["Harman","Rtings","Sonarworks"] }
+    { type:"Neutral",    files:[] },
+    { type:"Preference", files:[] }
 ];
 
 
@@ -143,22 +142,6 @@ const
 
         <p>Scelerisque in dictum non consectetur a. Elit pellentesque habitant morbi tristique senectus et. Nulla aliquet enim tortor at auctor urna nunc id. In ornare quam viverra orci. Auctor eu augue ut lectus arcu bibendum at varius vel. In cursus turpis massa tincidunt dui ut ornare lectus. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu. A diam sollicitudin tempor id. Tellus mauris a diam maecenas sed enim ut sem. Pellentesque id nibh tortor id aliquet lectus proin. Fermentum et sollicitudin ac orci phasellus. Dolor morbi non arcu risus quis. Bibendum enim facilisis gravida neque. Tellus in metus vulputate eu scelerisque felis. Integer malesuada nunc vel risus commodo. Lacus laoreet non curabitur gravida arcu.</p>
     `,
-    // Customize the count of widget divs, and customize the contents of them. As long as they're wrapped in the widget div, they should auto-wrap and maintain margins between themselves
-    widgets = `
-        <div class="accessories-widgets">
-            <div class="widget">
-                <img width="200" src="cringraph-logo.svg"/>
-            </div>
-
-            <div class="widget">
-                <img width="200" src="cringraph-logo.svg"/>
-            </div>
-
-            <div class="widget">
-                <img width="200" src="cringraph-logo.svg"/>
-            </div>
-        </div>
-    `,
     // Which of the above variables to actually insert into the page
     whichAccessoriesToUse = simpleAbout;
 
@@ -240,7 +223,7 @@ setupGraphAnalytics();
 
 
 // If alt_header is enabled, these are the items added to the header
-let headerLogoImgUrl = "cringraph-logo.svg",
+let headerLogoImgUrl = "",
     headerLinks = [
     {
         name: "Sample",
