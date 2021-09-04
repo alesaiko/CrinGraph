@@ -96,10 +96,10 @@ function setLayout() {
     }
 
     if (!alt_layout) {
-        applyStylesheet("style.css");
+        applyStylesheet("styles/style.css");
     } else {
-        applyStylesheet("style-alt.css");
-        applyStylesheet("style-alt-theme.css");
+        applyStylesheet("styles/style-alt.css");
+        applyStylesheet("styles/style-alt-theme.css");
     }
 }
 setLayout();
