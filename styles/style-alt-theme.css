@@ -1,15 +1,15 @@
 
 /* Primary color theme */
 :root {
-    --accent-color: hsl(0, 0%, 0%);
-    --accent-color-contrast: hsl(0, 0%, 55%);
+    --accent-color: hsla(0, 76%, 64%, 0.9);
+    --accent-color-contrast: hsl(0, 3%, 62%);
 
-    --background-color: hsl(0, 0%, 96%);
+    --background-color: hsl(0, 0%, 99%);
     --background-color-contrast: hsl(0, 0%, 90%);
-    --background-color-contrast-more: hsl(0, 0%, 65%);
+    --background-color-contrast-more: hsl(0, 0%, 75%);
     --background-color-graph: hsl(0, 0%, 100%);
     
-    --background-color-inputs: hsl(0, 0%, 100%);
+    --background-color-inputs: hsl(0, 0%, 97%);
     
     --font-color-primary: hsl(0, 0%, 10%);
     --font-color-secondary: hsl(0, 0%, 100%);
