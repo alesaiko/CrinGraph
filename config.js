@@ -44,17 +44,17 @@ const targets = [
 // Set up the watermark, based on config options above
 function watermark(svg) {
     let wm = svg.append("g")
-        .attr("transform", "translate("+(pad.l+W/2)+","+(pad.t+H/2-20)+")")
-        .attr("opacity",0.2);
-    
-    if ( watermark_image_url ) {
+        .attr("transform", "translate(" + (pad.l + W / 2) + "," + (pad.t + H / 2 - 20) + ")")
+        .attr("opacity", 0.2);
+
+    if (watermark_image_url) {
         wm.append("image")
-            .attrs({x:-64, y:-64, width:128, height:128, "xlink:href":watermark_image_url});
+            .attrs({ x: -64, y: -64, width: 128, height: 128, "xlink:href": watermark_image_url });
     }
-    
-    if ( watermark_text ) {
+
+    if (watermark_text) {
         wm.append("text")
-            .attrs({x:0, y:70, "font-size":28, "text-anchor":"middle", "class":"graph-name"})
+            .attrs({ x: 0, y: 70, "font-size": 28, "text-anchor": "middle", "class": "graph-name" })
             .text(watermark_text);
     }
 }
@@ -63,10 +63,10 @@ function watermark(svg) {
 
 // Set up tsvParse (?) with default values for AudioTools and REW measurements
 function initTsvParse() {
-    if ( data_format.toLowerCase() === "audiotools" ) {
+    if (data_format.toLowerCase() === "audiotools") {
         var dataStart = 3,
             dataEnd = 482;
-    } else if ( data_format.toLowerCase() === "rew" ) {
+    } else if (data_format.toLowerCase() === "rew") {
         var dataStart = 14,
             dataEnd = 493;
     } else {
@@ -74,9 +74,9 @@ function initTsvParse() {
         var dataStart = 2,
             dataEnd = 482;
     }
-    
-    tsvParse = fr => d3.tsvParseRows(fr).slice(dataStart,dataEnd)
-        .map(r=>r.map(d=>+d));
+
+    tsvParse = fr => d3.tsvParseRows(fr).slice(dataStart, dataEnd)
+        .map(r => r.map(d => +d));
 }
 initTsvParse();
 
@@ -87,15 +87,15 @@ function setLayout() {
     function applyStylesheet(styleSheet) {
         var docHead = document.querySelector("head"),
             linkTag = document.createElement("link");
-        
+
         linkTag.setAttribute("rel", "stylesheet");
         linkTag.setAttribute("type", "text/css");
-        
+
         linkTag.setAttribute("href", styleSheet);
         docHead.append(linkTag);
     }
 
-    if ( !alt_layout ) {
+    if (!alt_layout) {
         applyStylesheet("style.css");
     } else {
         applyStylesheet("style-alt.css");
@@ -108,7 +108,7 @@ setLayout();
 
 // Set restricted mode
 function setRestricted() {
-    if ( restricted ) {
+    if (restricted) {
         max_compare = 2;
         restrict_target = false;
         disallow_target = true;
@@ -121,7 +121,7 @@ setRestricted();
 
 // Configure HTML accessories to appear at the bottom of the page. Displayed only if accessories (above) is true
 // There are a few templates here for ease of use / examples, but these variables accept any HTML
-const 
+const
     // Short text, center-aligned, useful for a little side info, credits, links to measurement setup, etc. 
     simpleAbout = `
         <p class="center">This web software is based on the <a href="https://github.com/mlochbaum/CrinGraph">CrinGraph</a> open source software project.</p>
@@ -209,11 +209,11 @@ const linkSets = [
 
 // Set up analytics
 function setupGraphAnalytics() {
-    if ( analyticsEnabled ) {
+    if (analyticsEnabled) {
         const pageHead = document.querySelector("head"),
-              graphAnalytics = document.createElement("script"),
-              graphAnalyticsSrc = "graphAnalytics.js";
-        
+            graphAnalytics = document.createElement("script"),
+            graphAnalyticsSrc = "graphAnalytics.js";
+
         graphAnalytics.setAttribute("src", graphAnalyticsSrc);
         pageHead.append(graphAnalytics);
     }
@@ -225,11 +225,11 @@ setupGraphAnalytics();
 // If alt_header is enabled, these are the items added to the header
 let headerLogoImgUrl = "",
     headerLinks = [
-    {
-        name: "Sample",
-        url: "https://sample.com"
-    }
-];
+        {
+            name: "Sample",
+            url: "https://sample.com"
+        }
+    ];
 
 
 let tutorialDefinitions = [

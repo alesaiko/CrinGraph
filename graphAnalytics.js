@@ -13,10 +13,10 @@ function pushPhoneTag(eventName, p, trigger) {
         phoneBrand = p.dispBrand ? p.dispBrand : "Target",
         phoneModel = p.dispName,
         value = 1;
-    
+
     // Write function here to push event with the values described above
-    
-    if (logAnalytics) { console.log("Event:      "+ eventName +"\nTrigger:    "+ eventTrigger +"\nSite:       "+ analyticsSite +"\nPhone:      "+ phoneBrand +" "+ phoneModel); }
+
+    if (logAnalytics) { console.log("Event:      " + eventName + "\nTrigger:    " + eventTrigger + "\nSite:       " + analyticsSite + "\nPhone:      " + phoneBrand + " " + phoneModel); }
 }
 
 
@@ -27,11 +27,11 @@ function pushEventTag(eventName, targetWindow, trigger) {
         url = targetWindow.location.href,
         par = "?share=",
         value = 1,
-        activePhones = url.includes(par) ? decodeURI(url.replace(/_/g," ").split(par).pop().replace(/,/g, ", ")) : "null";
-        
+        activePhones = url.includes(par) ? decodeURI(url.replace(/_/g, " ").split(par).pop().replace(/,/g, ", ")) : "null";
+
     // Write function here to push event with the values described above
-    
-    if (logAnalytics) { console.log("Event:      "+ eventName +"\nTrigger:    "+ eventTrigger +"\nSite name:  "+ analyticsSite +"\nActive:     "+activePhones); }
+
+    if (logAnalytics) { console.log("Event:      " + eventName + "\nTrigger:    " + eventTrigger + "\nSite name:  " + analyticsSite + "\nActive:     " + activePhones); }
 }
 
 
