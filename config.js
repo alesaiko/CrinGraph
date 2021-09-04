@@ -1,13 +1,13 @@
 // Configuration options
-const init_phones = [""],                           // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+const init_phones = ["Alesaiko Target"],            // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
       DIR = "data/",                                // Directory where graph files are stored
-      data_format = "AudioTools",                   // Accepts "AudioTools," "REW," or "other"
+      data_format = "REW",                          // Accepts "AudioTools," "REW," or "other"
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
       default_normalization = "dB",                 // Sets default graph normalization mode. Accepts "dB" or "Hz"
       default_norm_db = 60,                         // Sets default dB normalization point
-      default_norm_hz = 500,                        // Sets default Hz normalization point (500Hz is recommended by IEC)
+      default_norm_hz = 1000,                       // Sets default Hz normalization point (500Hz is recommended by IEC)
       max_channel_imbalance = 5,                    // Channel imbalance threshold to show ! in the channel selector
-      alt_layout = false,                           // Toggle between classic and alt layouts
+      alt_layout = true,                            // Toggle between classic and alt layouts
       alt_sticky_graph = true,                      // If active graphs overflows the viewport, does the graph scroll with the page or stick to the viewport?
       alt_header = false,                           // Display a configurable header at the top of the alt layout
       alt_tutorial = false,                         // Display a configurable frequency response guide below the graph
@@ -24,15 +24,15 @@ const init_phones = [""],                           // Optional. Which graphs to
       headerHeight = '0px',                         // Optional. If expandable=true, determines how much space to leave for the parent page header
       darkModeButton = true,                        // Adds a "Dark Mode" button the main toolbar to let users set preference
       liteGraph = false,                            // Reduces number of lines drawn on graph. Maybe controversial.
-      targetDashed = false,                         // If true, makes target curves dashed lines
+      targetDashed = true,                          // If true, makes target curves dashed lines
       targetColorCustom = false,                    // If false, targets appear as a random gray value. Can replace with a fixed color value to make all targets the specified color, e.g. "black"
-      labelsPosition = "default",                   // Up to four labels will be grouped in a specified corner. Accepts "top-left," bottom-left," "bottom-right," and "default"
+      labelsPosition = "bottom-right",              // Up to four labels will be grouped in a specified corner. Accepts "top-left," bottom-left," "bottom-right," and "default"
       analyticsEnabled = false;                     // Enables Google Analytics 4 measurement of site usage
 
 // Specify which targets to display
 const targets = [
-    { type:"Neutral",    files:[] },
-    { type:"Preference", files:[] }
+    { type:"Neutral",    files:["IEF Neutral", "Harman"] },
+    { type:"Preference", files:["Alesaiko"] }
 ];
 
 
