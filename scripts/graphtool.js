@@ -1635,7 +1635,7 @@ d3.json(typeof PHONE_BOOK !== "undefined" ? PHONE_BOOK
                 ti = -targets.length,
                 ph = t => ({
                     isTarget: true, brand: b,
-                    dispName: t, phone: t, fullName: t + " Target", fileName: t + " Target"
+                    dispName: t, phone: t, fullName: t + " Target", fileName: "targets/" + t + " Target"
                 });
             d3.select(".manage").insert("div", ".manageTable")
                 .attr("class", "targets collapseTools");

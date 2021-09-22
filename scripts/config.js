@@ -1,5 +1,5 @@
 // Configuration options
-const init_phones = ["Alesaiko Target"],            // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+const init_phones = ["targets/IEF Neutral Target"], // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
       DIR = "data/",                                // Directory where graph files are stored
       data_format = "REW",                          // Accepts "AudioTools," "REW," or "other"
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
@@ -31,7 +31,7 @@ const init_phones = ["Alesaiko Target"],            // Optional. Which graphs to
 
 // Specify which targets to display
 const targets = [
-    { type:"Neutral",    files:["IEF Neutral", "Harman"] },
+    { type:"Neutral",    files:["IEF Neutral", "Harman", "Diffuse Field"] },
     { type:"Preference", files:["Alesaiko"] }
 ];
 
