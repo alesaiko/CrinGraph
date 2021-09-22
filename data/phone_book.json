@@ -1,5 +1,11 @@
 [
     {
+        "name": "HS Audio",
+        "phones": [
+            "Arena"
+        ]
+    },
+    {
         "name": "Moondrop",
         "phones": [
             "Spaceship"
@@ -12,18 +18,48 @@
         ]
     },
     {
+        "name": "Redmi",
+        "phones": [
+            "AirDots S"
+        ]
+    },
+    {
+        "name": "Sabbat",
+        "phones": [
+            "E12 Ultra"
+        ]
+    },
+    {
         "name": "Sennheiser",
         "phones": [
-            {
-                "name": ["CX 3.00"],
-                "file": ["CX 3.00", "CX 3.00 EQ"]
-            }
+            "CX 200",
+            "CX 3.00"
         ]
     },
     {
         "name": "Sony",
         "phones": [
-            "IER-Z1R"
+            "IER-Z1R",
+            "MH 755"
+        ]
+    },
+    {
+        "name": "Tanchjim",
+        "phones": [
+            "Tanya"
+        ]
+    },
+    {
+        "name": "TRN",
+        "phones": [
+            "V90"
+        ]
+    },
+    {
+        "name": "Unknown",
+        "phones": [
+            "Galamart",
+            "ES6"
         ]
     }
 ]
