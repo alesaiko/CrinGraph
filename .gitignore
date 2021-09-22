@@ -1,2 +1,5 @@
 data_mrs/*
 .DS_Store
+
+# Ignore nginx logs
+log/*
